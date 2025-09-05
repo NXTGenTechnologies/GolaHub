@@ -36,7 +36,13 @@ export default function Navbar() {
             >
               Contact
             </a>
+            <a href="/about"
+          className="text-foreground hover:text-primary transition-all duration-300 font-medium hover:scale-105"
+          >About</a>
           </nav>
+
+          
+
 
           <HamburgerMenu isOpen={isMobileMenuOpen} onToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
         </div>
