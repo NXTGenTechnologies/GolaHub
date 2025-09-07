@@ -1,6 +1,7 @@
 import { MapPin } from "lucide-react";
 import { HamburgerMenu } from "./hamburger-menu";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -18,31 +19,34 @@ export default function Navbar() {
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
+            <Link
+              href="/categories"
               className="text-foreground hover:text-primary transition-all duration-300 font-medium hover:scale-105"
             >
               Categories
-            </a>
-            <a
-              href="/add-business"
-              className="text-foreground hover:text-primary transition-all duration-300 font-medium hover:scale-105"
-            >
-              Add Business
-            </a>
-            <a
+            </Link>
+
+            <Link
               href="/contact"
               className="text-foreground hover:text-primary transition-all duration-300 font-medium hover:scale-105"
             >
               Contact
-            </a>
-            <a href="/about"
-          className="text-foreground hover:text-primary transition-all duration-300 font-medium hover:scale-105"
-          >About</a>
+            </Link>
+
+            <Link
+              href="/about"
+              className="text-foreground hover:text-primary transition-all duration-300 font-medium hover:scale-105"
+            >
+              About
+            </Link>
+
+            <Link
+              href="/add-business"
+              className="text-white bg-gradient-to-br from-primary to-accent px-4 py-2 rounded-md hover:text-background transition-all duration-300 font-medium hover:scale-105"
+            >
+              Add Business
+            </Link>
           </nav>
-
-          
-
 
           <HamburgerMenu isOpen={isMobileMenuOpen} onToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
         </div>
@@ -54,15 +58,18 @@ export default function Navbar() {
         >
           <nav className="px-4 py-4 bg-card border-t border-border">
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+              <Link href="/categories" className="text-foreground hover:text-primary transition-colors font-medium">
                 Categories
-              </a>
-              <a href="/add-business" className="text-foreground hover:text-primary transition-colors font-medium">
-                Add Business
-              </a>
-              <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
+              </Link>
+              <Link href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
                 Contact
-              </a>
+              </Link>
+              <Link href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+                About
+              </Link>
+              <Link href="/add-business" className="text-white text-center bg-gradient-to-br from-primary to-accent px-4 py-2 rounded-md hover:text-background transition-colors font-medium">
+                Add Business
+              </Link>
             </div>
           </nav>
         </div>
