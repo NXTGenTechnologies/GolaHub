@@ -2,6 +2,7 @@
 
 import CategoryGrid from "@/components/CategoryGrid";
 import FeaturedBusiness from "@/components/FeaturedBusiness";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Testinomials from "@/components/Testinomials";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <CategoryGrid />
       <FeaturedBusiness />
       <Testinomials />
+      <Footer />
         
     </div>
   );
