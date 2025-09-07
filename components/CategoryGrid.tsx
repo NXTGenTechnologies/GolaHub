@@ -9,7 +9,7 @@ export default function CategoryGrid() {
     { name: "Health Care", icon: "👨‍⚕️", count: "45+", color: "from-green-500 to-teal-500" },
     { name: "Coaching Centers", icon: "📚", count: "30+", color: "from-yellow-500 to-orange-500" },
     { name: "Event Services", icon: "🎉", count: "25+", color: "from-pink-500 to-rose-500" },
-    { name: "Beauty & Wellness", icon: "💄", count: "40+", color: "from-purple-500 to-indigo-500" },
+    { name: "Beauty Care", icon: "💄", count: "40+", color: "from-purple-500 to-indigo-500" },
   ]
 
   return (
@@ -20,11 +20,11 @@ export default function CategoryGrid() {
             {categories.map((category, index) => {
               const categoryLinks = {
                 Restaurants: "/category/restaurants",
-                Shops: "/category/shops",
-                Doctors: "/category/doctors",
+                "Local Shops": "/category/shops",
+                "Health Care": "/category/doctors",
                 "Coaching Centers": "/category/coaching",
                 "Event Services": "/category/events",
-                "Beauty & Wellness": "/category/beauty",
+                "Beauty Care": "/category/beauty",
               }
 
               return (
