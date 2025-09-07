@@ -13,13 +13,12 @@ import { useEffect, useState, useRef } from "react";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-    
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-gradient"></div>
 
       <div className="relative z-10">
         <Navbar />
 
-      
+       
         <section className="relative py-16 text-center overflow-hidden">
           <div className="relative max-w-3xl mx-auto px-6">
             <motion.h1
@@ -37,7 +36,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-base md:text-lg text-muted-foreground leading-relaxed glass-effect p-6 rounded-xl shadow-glow"
+              className="text-base md:text-lg text-muted-foreground leading-relaxed border border-primary/20 backdrop-blur-sm p-6 rounded-xl hover:shadow-xl transition-shadow duration-300"
             >
               GolaHub connects you with the best{" "}
               <span className="text-accent font-semibold">restaurants</span>,{" "}
@@ -50,7 +49,40 @@ export default function AboutPage() {
           </div>
         </section>
 
-        
+      
+        <section className="py-12 md:py-16 max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-primary mb-10">Our Vision & Mission</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-xl border border-primary/20 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300"
+            >
+              <h3 className="text-xl font-semibold text-accent mb-4">Our Vision</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                To build a connected community where businesses and customers thrive together,
+                making everyday services accessible, reliable, and trustworthy for everyone.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-xl border border-primary/20 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300"
+            >
+              <h3 className="text-xl font-semibold text-accent mb-4">Our Mission</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                To connect people with the best local services and businesses,
+                empowering communities with information and opportunities to grow and succeed.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+       
         <Section
           title="Delicious Dining"
           text="Discover the best local restaurants, from cozy cafes to family favorites. GolaHub brings food lovers closer to the finest dining experiences in town."
@@ -58,7 +90,6 @@ export default function AboutPage() {
           alt="Restaurants in Gola"
           flip={false}
         />
-
         <Section
           title="Trusted Dental Care"
           text="Whether you need routine check-ups or advanced treatments, find reliable dental clinics and experienced doctors right here in GolaHub."
@@ -66,7 +97,6 @@ export default function AboutPage() {
           alt="Dental services"
           flip={true}
         />
-
         <Section
           title="Local Businesses"
           text="Support your community by shopping local. From clothing boutiques to essential services, GolaHub makes it simple to discover trusted businesses nearby."
@@ -74,7 +104,6 @@ export default function AboutPage() {
           alt="Shops and services"
           flip={false}
         />
-
         <Section
           title="Coaching & Education"
           text="GolaHub helps students and parents find trusted coaching centers and educational institutions that build brighter futures."
@@ -82,7 +111,6 @@ export default function AboutPage() {
           alt="Coaching Center"
           flip={true}
         />
-
         <Section
           title="Medical Clinics"
           text="From general practitioners to specialized healthcare, GolaHub connects you to clinics where your health and well-being come first."
@@ -90,7 +118,6 @@ export default function AboutPage() {
           alt="Medical Clinic"
           flip={false}
         />
-
         <Section
           title="Books & Knowledge"
           text="Explore local bookstores and libraries in Gola. Whether it’s textbooks, novels, or rare finds, GolaHub helps you discover the joy of reading."
@@ -99,16 +126,16 @@ export default function AboutPage() {
           flip={true}
         />
 
-      
+        
         <Journey />
 
-        
+       
         <Achievements />
 
        
         <Testimonials />
 
-      
+        
         <section className="py-16 text-center bg-secondary text-secondary-foreground relative overflow-hidden rounded-t-2xl shadow-3xl">
           <div className="absolute inset-0 opacity-20">
             <Image
