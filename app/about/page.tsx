@@ -9,42 +9,16 @@ import {
   useInView,
 } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
-import Particles from "react-tsparticles";
 
 export default function AboutPage() {
-  const particlesOptions = {
-    background: { color: { value: "transparent" } },
-    fpsLimit: 60,
-    interactivity: {
-      events: { onHover: { enable: true, mode: "repulse" } },
-      modes: { repulse: { distance: 100, duration: 0.4 } },
-    },
-    particles: {
-      color: { value: "#ffffff" },
-      links: { enable: true, color: "#ffffff", distance: 150, opacity: 0.1, width: 1 },
-      collisions: { enable: false },
-      move: { direction: "none", enable: true, outModes: "bounce", speed: 0.3 },
-      number: { value: 50 },
-      opacity: { value: 0.2 },
-      shape: { type: "circle" },
-      size: { value: { min: 1, max: 4 } },
-    },
-    detectRetina: true,
-  };
-
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Background Layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 bg-[length:200%_200%] animate-gradient-slow"></div>
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply opacity-40 animate-pulse-slow"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply opacity-30 animate-spin-slow"></div>
-      <Particles className="absolute inset-0 z-0" options={particlesOptions} />
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-gradient"></div>
 
-      {/* Page Content */}
-      <div className="relative z-10 text-white">
+      <div className="relative z-10">
         <Navbar />
 
-        {/* Hero Section */}
+       
         <section className="relative py-16 text-center overflow-hidden">
           <div className="relative max-w-3xl mx-auto px-6">
             <motion.h1
@@ -52,7 +26,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-4xl md:text-5xl font-bold text-primary mb-6"
             >
               About GolaHub
             </motion.h1>
@@ -62,32 +36,32 @@ export default function AboutPage() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-base md:text-lg leading-relaxed border border-white/20 backdrop-blur-sm p-6 rounded-xl hover:shadow-xl transition-shadow duration-300"
+              className="text-base md:text-lg text-muted-foreground leading-relaxed border border-primary/20 backdrop-blur-sm p-6 rounded-xl hover:shadow-xl transition-shadow duration-300"
             >
               GolaHub connects you with the best{" "}
-              <span className="text-yellow-300 font-semibold">restaurants</span>,{" "}
-              <span className="text-yellow-300 font-semibold">dentists</span>,{" "}
-              <span className="text-yellow-300 font-semibold">coaching centers</span>,{" "}
-              <span className="text-yellow-300 font-semibold">medical clinics</span>,{" "}
-              <span className="text-yellow-300 font-semibold">book shops</span>, and essential services in your area.  
+              <span className="text-accent font-semibold">restaurants</span>,{" "}
+              <span className="text-accent font-semibold">dentists</span>,{" "}
+              <span className="text-accent font-semibold">coaching centers</span>,{" "}
+              <span className="text-accent font-semibold">medical clinics</span>,{" "}
+              <span className="text-accent font-semibold">book shops</span>, and essential services in your area.  
               We help businesses grow while making life easier for the community.
             </motion.p>
           </div>
         </section>
 
-        {/* Vision & Mission */}
+      
         <section className="py-12 md:py-16 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-10">Our Vision & Mission</h2>
+          <h2 className="text-3xl font-bold text-primary mb-10">Our Vision & Mission</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
-              className="p-6 rounded-xl border border-white/20 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300"
+              className="p-6 rounded-xl border border-primary/20 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300"
             >
-              <h3 className="text-xl font-semibold mb-4 text-yellow-300">Our Vision</h3>
-              <p className="leading-relaxed">
+              <h3 className="text-xl font-semibold text-accent mb-4">Our Vision</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 To build a connected community where businesses and customers thrive together,
                 making everyday services accessible, reliable, and trustworthy for everyone.
               </p>
@@ -97,10 +71,10 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               viewport={{ once: true }}
-              className="p-6 rounded-xl border border-white/20 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300"
+              className="p-6 rounded-xl border border-primary/20 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300"
             >
-              <h3 className="text-xl font-semibold mb-4 text-yellow-300">Our Mission</h3>
-              <p className="leading-relaxed">
+              <h3 className="text-xl font-semibold text-accent mb-4">Our Mission</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 To connect people with the best local services and businesses,
                 empowering communities with information and opportunities to grow and succeed.
               </p>
@@ -108,7 +82,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Dynamic Sections */}
+       
         <Section
           title="Delicious Dining"
           text="Discover the best local restaurants, from cozy cafes to family favorites. GolaHub brings food lovers closer to the finest dining experiences in town."
@@ -152,20 +126,32 @@ export default function AboutPage() {
           flip={true}
         />
 
-        {/* Journey, Achievements, Testimonials */}
+        
         <Journey />
+
+       
         <Achievements />
+
+       
         <Testimonials />
 
-        {/* CTA */}
-        <section className="py-16 text-center bg-white/10 backdrop-blur-md rounded-t-2xl shadow-3xl relative overflow-hidden">
+        
+        <section className="py-16 text-center bg-secondary text-secondary-foreground relative overflow-hidden rounded-t-2xl shadow-3xl">
+          <div className="absolute inset-0 opacity-20">
+            <Image
+              src="/modern-cafe-interior.png"
+              alt="Background"
+              fill
+              className="object-cover object-center"
+            />
+          </div>
           <div className="relative">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
-              className="text-2xl md:text-3xl font-bold mb-6 text-yellow-300 animate-glow hover:scale-105 transition-transform"
+              className="text-2xl md:text-3xl font-bold mb-6 animate-glow hover:scale-105 transition-transform"
             >
               Ready to explore GolaHub?
             </motion.h2>
@@ -174,7 +160,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="px-8 py-3 rounded-lg font-semibold bg-yellow-400 text-white hover:opacity-90 transition shadow-glow animate-glow"
+              className="px-8 py-3 rounded-lg font-semibold bg-primary text-primary-foreground hover:opacity-90 transition shadow-glow animate-glow"
             >
               Get Started
             </motion.button>
@@ -185,7 +171,7 @@ export default function AboutPage() {
   );
 }
 
-/* ------------------------ Section Component ------------------------ */
+
 function Section({
   title,
   text,
@@ -206,14 +192,16 @@ function Section({
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className={`backdrop-blur-sm bg-white/10 p-6 md:p-8 rounded-xl shadow-glow hover:-translate-y-1 transition-transform ${
+        className={`glass-effect p-6 md:p-8 rounded-xl shadow-glow hover:-translate-y-1 transition-transform ${
           flip ? "order-2 md:order-1" : ""
         }`}
       >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-3 md:mb-4 hover:scale-105 transition-transform text-yellow-300">
+        <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-3 md:mb-4 hover:scale-105 transition-transform">
           {title}
         </h2>
-        <p className="leading-relaxed text-white/90">{text}</p>
+        <p className="text-foreground leading-relaxed hover:text-muted-foreground transition-colors">
+          {text}
+        </p>
       </motion.div>
 
       <motion.div
@@ -235,7 +223,7 @@ function Section({
   );
 }
 
-/* ------------------------ Journey Component ------------------------ */
+
 function Journey() {
   const milestones = [
     { year: "2022", text: "Founded GolaHub to connect local businesses." },
@@ -246,8 +234,10 @@ function Journey() {
 
   return (
     <section className="py-16 max-w-4xl mx-auto px-6">
-      <h2 className="text-3xl font-bold text-center mb-10 text-yellow-300">Our Journey</h2>
-      <div className="relative border-l-4 border-yellow-300 pl-6 space-y-8">
+      <h2 className="text-3xl font-bold text-center mb-10 text-primary">
+        Our Journey
+      </h2>
+      <div className="relative border-l-4 border-primary pl-6 space-y-8">
         {milestones.map((m, i) => (
           <motion.div
             key={i}
@@ -256,8 +246,8 @@ function Journey() {
             transition={{ duration: 0.7, delay: i * 0.2 }}
             viewport={{ once: false }}
           >
-            <span className="text-xl font-semibold text-white">{m.year}</span>
-            <p className="text-white/90">{m.text}</p>
+            <span className="text-xl font-semibold text-accent">{m.year}</span>
+            <p className="text-muted-foreground">{m.text}</p>
           </motion.div>
         ))}
       </div>
@@ -265,7 +255,7 @@ function Journey() {
   );
 }
 
-/* ------------------------ Counter Component ------------------------ */
+
 function Counter({ target }: { target: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { amount: 0.6 });
@@ -290,7 +280,7 @@ function Counter({ target }: { target: number }) {
   return <span ref={ref}>{new Intl.NumberFormat().format(current)}</span>;
 }
 
-/* ------------------------ Achievements Component ------------------------ */
+
 function Achievements() {
   const stats = [
     { label: "Restaurants", value: 500 },
@@ -301,7 +291,7 @@ function Achievements() {
 
   return (
     <section className="py-16 max-w-6xl mx-auto px-6 text-center">
-      <h2 className="text-3xl font-bold mb-10 text-yellow-300">Achievements</h2>
+      <h2 className="text-3xl font-bold text-primary mb-10">Achievements</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((s, i) => (
           <motion.div
@@ -310,12 +300,12 @@ function Achievements() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: i * 0.2 }}
             viewport={{ once: false }}
-            className="backdrop-blur-sm bg-white/10 p-6 rounded-xl shadow-glow hover:-translate-y-1 transition-transform"
+            className="glass-effect p-6 rounded-xl shadow-glow hover:-translate-y-1 transition-transform"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-yellow-300">
+            <h3 className="text-2xl md:text-3xl font-bold text-accent">
               <Counter target={s.value} />+
             </h3>
-            <p className="text-white/90">{s.label}</p>
+            <p className="text-muted-foreground">{s.label}</p>
           </motion.div>
         ))}
       </div>
@@ -323,17 +313,28 @@ function Achievements() {
   );
 }
 
-/* ------------------------ Testimonials Component ------------------------ */
+
 function Testimonials() {
   const reviews = [
-    { name: "Sarah K.", text: "GolaHub made finding the best dental clinic so easy!" },
-    { name: "Rajesh P.", text: "The restaurant recommendations are always spot on!" },
-    { name: "Ananya M.", text: "I love how easy it is to discover coaching centers nearby." },
+    {
+      name: "Sarah K.",
+      text: "GolaHub made finding the best dental clinic so easy!",
+    },
+    {
+      name: "Rajesh P.",
+      text: "The restaurant recommendations are always spot on!",
+    },
+    {
+      name: "Ananya M.",
+      text: "I love how easy it is to discover coaching centers nearby.",
+    },
   ];
 
   return (
     <section className="py-16 max-w-6xl mx-auto px-6">
-      <h2 className="text-3xl font-bold text-center mb-10 text-yellow-300">What People Say</h2>
+      <h2 className="text-3xl font-bold text-center mb-10 text-primary">
+        What People Say
+      </h2>
       <div className="grid md:grid-cols-3 gap-8">
         {reviews.map((r, i) => (
           <motion.div
@@ -342,10 +343,10 @@ function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: i * 0.2 }}
             viewport={{ once: false }}
-            className="backdrop-blur-sm bg-white/10 p-6 rounded-xl shadow-glow hover:-translate-y-2 transition-transform"
+            className="glass-effect p-6 rounded-xl shadow-glow hover:-translate-y-2 transition-transform"
           >
-            <p className="text-white/90 mb-4">“{r.text}”</p>
-            <h4 className="font-semibold text-yellow-300">– {r.name}</h4>
+            <p className="text-muted-foreground mb-4">“{r.text}”</p>
+            <h4 className="font-semibold text-primary">– {r.name}</h4>
           </motion.div>
         ))}
       </div>
