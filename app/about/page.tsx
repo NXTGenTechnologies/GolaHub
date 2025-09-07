@@ -13,13 +13,13 @@ import { useEffect, useState, useRef } from "react";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      {/* Global animated gradient background */}
+    
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-gradient"></div>
 
       <div className="relative z-10">
         <Navbar />
 
-        {/* Hero */}
+      
         <section className="relative py-16 text-center overflow-hidden">
           <div className="relative max-w-3xl mx-auto px-6">
             <motion.h1
@@ -50,7 +50,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Sections */}
+        
         <Section
           title="Delicious Dining"
           text="Discover the best local restaurants, from cozy cafes to family favorites. GolaHub brings food lovers closer to the finest dining experiences in town."
@@ -99,16 +99,16 @@ export default function AboutPage() {
           flip={true}
         />
 
-        {/* Journey Timeline */}
+      
         <Journey />
 
-        {/* Achievements with Live Counters */}
+        
         <Achievements />
 
-        {/* Testimonials */}
+       
         <Testimonials />
 
-        {/* CTA */}
+      
         <section className="py-16 text-center bg-secondary text-secondary-foreground relative overflow-hidden rounded-t-2xl shadow-3xl">
           <div className="absolute inset-0 opacity-20">
             <Image
@@ -144,7 +144,7 @@ export default function AboutPage() {
   );
 }
 
-/* Reusable Section Component */
+
 function Section({
   title,
   text,
@@ -196,7 +196,7 @@ function Section({
   );
 }
 
-/* Journey Timeline */
+
 function Journey() {
   const milestones = [
     { year: "2022", text: "Founded GolaHub to connect local businesses." },
@@ -228,7 +228,7 @@ function Journey() {
   );
 }
 
-/* Counter Component with restart on scroll */
+
 function Counter({ target }: { target: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { amount: 0.6 });
@@ -253,7 +253,7 @@ function Counter({ target }: { target: number }) {
   return <span ref={ref}>{new Intl.NumberFormat().format(current)}</span>;
 }
 
-/* Achievements */
+
 function Achievements() {
   const stats = [
     { label: "Restaurants", value: 500 },
@@ -286,7 +286,7 @@ function Achievements() {
   );
 }
 
-/* Testimonials */
+
 function Testimonials() {
   const reviews = [
     {
