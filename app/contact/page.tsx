@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="relative z-10">
         <Navbar />
 
-        <section className="py-16 text-center px-6">
+        <section className="py-16 text-center px-2">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function Contact() {
           </motion.p>
         </section>
 
-        <section className="py-12 md:py-16 max-w-3xl mx-auto px-6">
+        <section className="py-12 md:py-16 max-w-3xl mx-auto px-2">
           <motion.form
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function Contact() {
         </section>
 
         
-        <section className="py-12 md:py-16 max-w-3xl mx-auto px-6 text-center space-y-6">
+        <section className="py-12 md:py-16 max-w-3xl mx-auto px-2 text-center space-y-6">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

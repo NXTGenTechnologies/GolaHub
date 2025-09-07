@@ -20,7 +20,7 @@ export default function AboutPage() {
 
        
         <section className="relative py-16 text-center overflow-hidden">
-          <div className="relative max-w-3xl mx-auto px-6">
+          <div className="relative max-w-3xl mx-auto px-4">
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function AboutPage() {
         </section>
 
       
-        <section className="py-12 md:py-16 max-w-4xl mx-auto px-6 text-center">
+        <section className="py-12 md:py-16 max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-primary mb-10">Our Vision & Mission</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
@@ -186,7 +186,7 @@ function Section({
   flip: boolean;
 }) {
   return (
-    <section className="py-12 md:py-16 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+    <section className="py-12 md:py-16 max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
       <motion.div
         initial={{ opacity: 0, x: flip ? 50 : -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -233,7 +233,7 @@ function Journey() {
   ];
 
   return (
-    <section className="py-16 max-w-4xl mx-auto px-6">
+    <section className="py-16 max-w-4xl mx-auto px-4">
       <h2 className="text-3xl font-bold text-center mb-10 text-primary">
         Our Journey
       </h2>
@@ -290,7 +290,7 @@ function Achievements() {
   ];
 
   return (
-    <section className="py-16 max-w-6xl mx-auto px-6 text-center">
+    <section className="py-16 max-w-6xl mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold text-primary mb-10">Achievements</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((s, i) => (
@@ -331,7 +331,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className="py-16 max-w-6xl mx-auto px-6">
+    <section className="py-16 max-w-6xl mx-auto px-4">
       <h2 className="text-3xl font-bold text-center mb-10 text-primary">
         What People Say
       </h2>

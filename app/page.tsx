@@ -1,5 +1,6 @@
 "use client";
 
+import CategoryGrid from "@/components/CategoryGrid";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 
@@ -9,6 +10,7 @@ export default function HomePage() {
       
       <Navbar />
       <Hero />
+      <CategoryGrid />
         
     </div>
   );

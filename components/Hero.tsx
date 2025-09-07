@@ -7,7 +7,7 @@ export default function Hero() {
     const typingWords = ["restaurants", "shops", "doctors", "coaching"]
     
   return (
-    <section className="relative py-24 px-4 bg-gradient-to-br from-background via-muted/30 to-accent/10 overflow-hidden">
+    <section className="relative py-24 px-2 bg-gradient-to-br from-background via-muted/30 to-accent/10 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-full blur-3xl animate-pulse delay-1000"></div>

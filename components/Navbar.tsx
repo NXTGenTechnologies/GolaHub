@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-2 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
               <MapPin className="w-6 h-6 text-white" />
@@ -56,7 +56,7 @@ export default function Navbar() {
             isMobileMenuOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <nav className="px-4 py-4 bg-card border-t border-border">
+          <nav className="px-2 py-4 bg-card border-t border-border">
             <div className="flex flex-col space-y-4">
               <Link href="/categories" className="text-foreground hover:text-primary transition-colors font-medium">
                 Categories
