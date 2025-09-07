@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -18,24 +19,24 @@ export default function Footer() {
               <h5 className="font-semibold text-foreground mb-4">Categories</h5>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <a href="/category/restaurants" className="hover:text-primary transition-colors">
+                  <Link href="/category/restaurants" className="hover:text-primary transition-colors">
                     Restaurants
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/category/shops" className="hover:text-primary transition-colors">
+                  <Link href="/category/shops" className="hover:text-primary transition-colors">
                     Shops
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/category/doctors" className="hover:text-primary transition-colors">
+                  <Link href="/category/doctors" className="hover:text-primary transition-colors">
                     Healthcare
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/category/coaching" className="hover:text-primary transition-colors">
+                  <Link href="/category/coaching" className="hover:text-primary transition-colors">
                     Education
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -43,19 +44,19 @@ export default function Footer() {
               <h5 className="font-semibold text-foreground mb-4">For Business</h5>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <a href="/add-business" className="hover:text-primary transition-colors">
+                  <Link href="/add-business" className="hover:text-primary transition-colors">
                     Add Your Business
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <Link href="#" className="hover:text-primary transition-colors">
                     Premium Listing
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <Link href="#" className="hover:text-primary transition-colors">
                     Business Support
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
