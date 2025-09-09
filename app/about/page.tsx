@@ -18,7 +18,7 @@ export default function AboutPage() {
       <div className="relative z-10">
         <Navbar />
 
-       
+        {/* About Section */}
         <section className="relative py-16 text-center overflow-hidden">
           <div className="relative max-w-3xl mx-auto px-4">
             <motion.h1
@@ -43,13 +43,13 @@ export default function AboutPage() {
               <span className="text-accent font-semibold">dentists</span>,{" "}
               <span className="text-accent font-semibold">coaching centers</span>,{" "}
               <span className="text-accent font-semibold">medical clinics</span>,{" "}
-              <span className="text-accent font-semibold">book shops</span>, and essential services in your area.  
+              <span className="text-accent font-semibold">book shops</span>, and essential services in your area.
               We help businesses grow while making life easier for the community.
             </motion.p>
           </div>
         </section>
 
-      
+        {/* Vision & Mission */}
         <section className="py-12 md:py-16 max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-primary mb-10">Our Vision & Mission</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -82,7 +82,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-       
+        {/* Service Sections */}
         <Section
           title="Delicious Dining"
           text="Discover the best local restaurants, from cozy cafes to family favorites. GolaHub brings food lovers closer to the finest dining experiences in town."
@@ -126,16 +126,19 @@ export default function AboutPage() {
           flip={true}
         />
 
-        
+        {/* Journey */}
         <Journey />
 
-       
+        {/* Performance Highlights */}
+        <PerformanceHighlights />
+
+        {/* Achievements */}
         <Achievements />
 
-       
+        {/* Testimonials */}
         <Testimonials />
 
-        
+        {/* Call to Action */}
         <section className="py-16 text-center bg-secondary text-secondary-foreground relative overflow-hidden rounded-t-2xl shadow-3xl">
           <div className="absolute inset-0 opacity-20">
             <Image
@@ -171,7 +174,9 @@ export default function AboutPage() {
   );
 }
 
-
+// -----------------------
+// Section Component
+// -----------------------
 function Section({
   title,
   text,
@@ -223,7 +228,9 @@ function Section({
   );
 }
 
-
+// -----------------------
+// Journey Component
+// -----------------------
 function Journey() {
   const milestones = [
     { year: "2022", text: "Founded GolaHub to connect local businesses." },
@@ -255,7 +262,9 @@ function Journey() {
   );
 }
 
-
+// -----------------------
+// Counter Component
+// -----------------------
 function Counter({ target }: { target: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { amount: 0.6 });
@@ -280,7 +289,52 @@ function Counter({ target }: { target: number }) {
   return <span ref={ref}>{new Intl.NumberFormat().format(current)}</span>;
 }
 
+// -----------------------
+// Performance Highlights
+// -----------------------
+function PerformanceHighlights() {
+  const highlights = [
+    { label: "Businesses Listed", value: 1200 },
+    { label: "Active Users", value: 8500 },
+    { label: "Monthly Visits", value: 25000 },
+  ];
 
+  return (
+    <section className="py-16 max-w-6xl mx-auto px-4 text-center">
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="text-3xl font-bold text-primary mb-10"
+      >
+        Performance Highlights
+      </motion.h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {highlights.map((h, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: i * 0.2 }}
+            viewport={{ once: false }}
+            className="glass-effect p-6 rounded-xl shadow-glow hover:-translate-y-1 transition-transform"
+          >
+            <h3 className="text-3xl md:text-4xl font-bold text-accent">
+              <Counter target={h.value} />+
+            </h3>
+            <p className="text-muted-foreground">{h.label}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// -----------------------
+// Achievements Component
+// -----------------------
 function Achievements() {
   const stats = [
     { label: "Restaurants", value: 500 },
@@ -313,7 +367,9 @@ function Achievements() {
   );
 }
 
-
+// -----------------------
+// Testimonials Component
+// -----------------------
 function Testimonials() {
   const reviews = [
     {
