@@ -20,7 +20,7 @@ export default function Navbar() {
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link
-              href="/categories"
+              href="/category"
               className="text-foreground hover:text-primary transition-all duration-300 font-medium hover:scale-105"
             >
               Categories
@@ -58,7 +58,7 @@ export default function Navbar() {
         >
           <nav className="px-2 py-4 bg-card border-t border-border">
             <div className="flex flex-col space-y-4">
-              <Link href="/categories" className="text-foreground hover:text-primary transition-colors font-medium">
+              <Link href="/category" className="text-foreground hover:text-primary transition-colors font-medium">
                 Categories
               </Link>
               <Link href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
